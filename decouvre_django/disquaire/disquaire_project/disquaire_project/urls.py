@@ -21,7 +21,7 @@ if settings.DEBUG:
     urlpatterns = []
     urlpatterns += [
         path('__debug__/', include(debug_toolbar.urls)),
-
+        path('store', include('store.urls'))
         # For django versions before 2.0:
         # url(r'^__debug__/', include(debug_toolbar.urls)),
 
