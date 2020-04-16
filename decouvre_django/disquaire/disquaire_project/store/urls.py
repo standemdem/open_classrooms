@@ -1,7 +1,8 @@
 from django.urls import path
 
-from . import views # import views so we can use them in urls.
+from . import views
 
 urlpatterns = [
-    path('', views.index), # "/store" will call the method "index" in "views.py"
+    path('', views.listing),
+    path(r'^(?P<album_id>[0-9]+)/', views.detail),
 ]
